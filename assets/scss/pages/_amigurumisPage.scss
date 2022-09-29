@@ -1,0 +1,87 @@
+/*** DISCOGRAPHY SECTION ***/
+
+.discography-section{
+    display: grid;
+    grid-template-columns: repeat(4, 270px);
+    justify-content: center;
+    gap: 20px;
+    padding: 2% 0;
+
+    @include mq(xxlarge){
+        grid-template-columns: repeat(3, 270px);
+        gap: 1.5rem;
+    }
+
+    @include mq(large){
+        grid-template-columns: repeat(3, 250px);
+        gap: 1rem;
+    }
+
+    @include mq(medium){
+        grid-template-columns: repeat(3, 200px);
+        gap: 1rem;
+    }
+
+    @include mq(small){
+        grid-template-columns: repeat(2, 200px);
+    }
+
+    @include mq(xsmall){
+        grid-template-columns: 300px;
+    }
+
+    &__card{
+        height: 270px;
+        width: 270px;
+        position: relative;
+        cursor: pointer;
+
+        @include mq(large){
+            height: 250px;
+            width: 250px;
+        }
+
+        @include mq(medium){
+            height: 200px;
+            width: 200px;
+        }
+
+        @include mq(xsmall){
+            height: 300px;
+            width: 300px;
+        }
+
+        img{
+            @include wh-100;
+            object-fit: cover;
+            filter: brightness(1);
+        }
+
+        &--text{
+            position: absolute;
+            top: 0;
+            left: 0;
+            @include wh-100;
+            @include flex-center-center;
+            flex-direction: column;
+            color: $color--white-1;
+            opacity: 0;
+            background-color: rgba(0,0,0,0.8);
+            transition: all .4s ease;
+
+            h2{
+                font-size: 18px;
+                text-align: center;
+                font-family: 'Fredoka', sans-serif;
+                font-weight: 400;
+                color: $color--white-1;
+            }
+        }
+
+        &:hover{
+            .discography-section__card--text{
+                opacity: 1;
+            }
+        }
+    }
+}

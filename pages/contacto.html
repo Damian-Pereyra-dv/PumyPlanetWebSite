@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="es" prefix="og: https://ogp.me/ns#">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta property="og:title" content="Descubre el mundo de Pumy Planet"/>
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:description" content="El sitio web de Pumy Planet, para que conozcas todo lo que te puede ofrecer."/>
+    <meta property="og:type" content="website"/>
+    <meta name="keywords" content="amigurumi, crochet, peluches, lana, anime, disney, bebe, pumy planet">
+    <meta name="description" content="El sitio web de Pumy Planet, para que conozcas todo lo que te puede ofrecer.">
+    <title>Pumy Planet</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="shortcut icon" href="../assets/img/pumi_planet.png" type="image/x-icon">
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <div class="allBody">
+        <header>
+            <nav class="navbar">
+                <div class="navbar-container">
+                    <div class="navbar-logo">
+                        <a href="../index.html"><img src="../assets/img/pumi_planet.png" alt="Logo PUMIPLANET"></a>
+                    </div>
+                    <ul class="navbar-menu" id="menu">
+                        <li class="navbar-item"><a class="navbar-link" href="../index.html"  data-type="navbar-active">Inicio</a></li>
+                        <li class="navbar-item"><a class="navbar-link" href="./galeria.html">Galeria</a></li>
+                        <li class="navbar-item"><a class="navbar-link" href="./noticias.html">Miembros</a></li>
+                        <li class="navbar-item"><a class="navbar-link" href="./sobre-nosotros.html">Sobre Nosotros</a></li>
+                        <li class="navbar-item"><a class="navbar-link" href="./contacto.html">Contacto</a></li>
+                    </ul>
+                    <button id="btn-toggle" class="navbar-btn">
+                       <div class="navbar-btn--container">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                       </div>
+                    </button>
+                </div>
+            </nav>
+        </header>
+
+    <main class="contact">
+        <!-- Contact Image -->
+        <section class="contact-image">
+            <img src="../assets/img/portada-contactos.jpg" alt="">
+        </section>
+
+        <!-- Contact Section -->
+        <section class="contact-section">
+            <div class="contact-section__container">
+                <h1 class="contact-section__container--title">Pedi el Amigurumi que desees!</h1>
+                <form class="row mt-5" method="POST" action="../php/send.php">
+                    <div class="col-md-6">
+                        <div class="mb-3">
+                            <label for="nombre" class="form-label">Nombre</label>
+                            <input type="text" class="form-control form-control-lg" id="nombre" name="nombre">
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="mb-3">
+                            <label for="apellido" class="form-label">Apellido</label>
+                            <input type="text" class="form-control form-control-lg" id="apellido" name="apellido">
+                        </div>
+                    </div>
+                    <div class="col-md-12">
+                        <div class="mb-3">
+                            <label for="mail" class="form-label">Mail</label>
+                            <input type="email" class="form-control form-control-lg" id="mail" name="mail">
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="mb-3">
+                            <select class="form-select form-control-lg" aria-label="Default select example">
+                                <option selected>Rango de edad</option>
+                                <option value="1">Menor de 18 años (pide permiso a un mayor)</option>
+                                <option value="2">Mayor de 18 años</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="mb-3">
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault" name="news">
+                                <label class="form-check-label" for="flexCheckDefault">
+                                    ¿Desea recibir noticias sobre nuevos Amigurumis?
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-12">
+                        <div class="mb-3">
+                            <label for="exampleFormControlTextarea1" class="form-label">Mensaje</label>
+                            <textarea class="form-control" id="exampleFormControlTextarea1" rows="5" name="mensaje"></textarea>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <button type="submit" class="main_btn contact-section__btn mb-3 w-100">Enviar</button>
+                    </div>
+                    <div class="col-md-6">
+                        <button type="reset" class="main_btn contact-section__btn w-100">Resetear</button>
+                    </div>
+                </form>
+                
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+          <div class="footer-content__social-media">
+            <ul>
+              <a
+                href="https://www.facebook.com/Pumy-Planet-100569625677341/"
+                class="footer-content__social-media--icons"
+                target="_blank"
+                ><li class="footer-content__social-media--icons">
+                  <i class="fa-brands fa-facebook"></i></li
+              ></a>
+              <a
+                href="https://www.instagram.com/pumy.planet/"
+                class="footer-content__social-media--icons"
+                target="_blank"
+                ><li class="footer-content__social-media--icons">
+                  <i class="fa-brands fa-instagram"></i></li
+              ></a>
+            </ul>
+          </div>
+          <hr class="footer-content__divider" />
+          <div class="footer-content__info">
+            <ul class="footer-content__info--menu">
+              <a href="#"><li>Ayuda</li></a>
+              <a href="#"><li>Privacidad</li></a>
+              <a href="#"><li>T&C</li></a>
+            </ul>
+          </div>
+        </div>
+        <div class="copyright-section">
+          <p>
+            &copy; Copyright 2022 - PUMIPLANET | Diseñada por
+            <a href="https://github.com/Damian-Pereyra-dv" target="_blank"
+              >Damian Pereyra</a
+            >
+          </p>
+        </div>
+      </footer>
+    </div>
+    <script src="../assets/js/main.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+  
+
+</body>
+</html>

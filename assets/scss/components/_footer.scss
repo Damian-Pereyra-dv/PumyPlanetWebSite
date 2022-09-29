@@ -1,0 +1,107 @@
+/*** FOOTER ***/
+
+footer{
+    height: auto;
+    background-color: $color--dark;
+
+    .footer-content{
+        @include flex-center-center;
+        flex-direction: column;
+        height: auto;
+        padding: 1% 0;
+
+        .footer-content__social-media{
+            ul{
+                @include flex-center-center;
+                gap: 15px;
+                list-style: none;
+                padding: 1.5rem;
+                color: $color--white-1;
+
+                a{
+                    @each $social, $background-color in $social__media{
+                        &:nth-child(#{$social}){
+                            background: $background-color;
+                        }
+                    }
+                }
+                
+            }
+
+            .footer-content__social-media--icons{
+                @include flex-center-center;
+                height: 40px;
+                width: 40px;
+                border-radius: 50%;
+                color: $color--white-1;
+                text-decoration: none;
+                transition: all .5s ease;
+
+                i{
+                    font-size: 22px;
+                }
+
+                &:hover{
+                    transform: scale(1.1);
+                }
+            }
+        }
+
+        .footer-content__divider{
+            color: $color--light-grey-1;
+            width: 70%;
+            margin: 0 auto;
+            border: 1px solid $color--light-grey-1;
+            opacity: 1;
+        }
+
+        .footer-content__info{
+            margin: 0 auto;
+    
+            .footer-content__info--menu{
+                list-style: none;
+                @include flex-center-center;
+                gap: 20px;
+                padding: 1.5rem;
+    
+                a{
+                    text-decoration: none;
+                    color: $color--light-grey-1;
+                    transition: all .4s ease;
+                    text-transform: uppercase;
+                    font-family: 'Fredoka', sans-serif;
+    
+                    &:last-child(){
+                        margin-right: 0;
+                    }
+    
+                    &:hover{
+                        color: $color--white-1;
+                    }
+                }
+            }
+        }
+    }
+
+    .copyright-section{
+        width: 100%;
+        padding: 10px 0;
+        background-color: $color--dark-grey-1;
+        color: #575656;
+        text-align: center;
+        font-size: 14px;
+
+        p{
+            @include mq(xsmall){
+                margin: 0 auto;
+                width: 80%;
+            }
+        }
+
+        a{
+            text-decoration: none;
+            color: $color--light-grey-2;
+            transition: all .4s ease;
+        }
+    }
+}

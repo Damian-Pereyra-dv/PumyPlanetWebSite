@@ -1,0 +1,88 @@
+/*** BASE ***/
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600&display=swap');
+
+*,
+*::after,
+*::before{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+@font-face{
+    font-family: 'Gotham';
+    src: url('../fonts/Gotham-Font/GothamMedium.ttf');
+}
+
+body{
+    font-family: 'Poppins', sans-serif;
+    font-size: clamp(1rem, 2vw, 1.125rem);
+    line-height: 1.66;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6{
+    color: $color--dark-1;
+}
+
+/*** SITE ***/  
+
+.site-page{
+    width: 70%;
+    margin: 3rem auto;
+
+    @include mq(medium){
+        width: 80%;
+        margin: 3rem auto;
+    }
+
+    @include mq(small){
+        width: 90%;
+        margin-top: calc(2rem + 60px);
+    }
+
+    @include mq(xsmall){
+        margin: 2rem auto;
+        margin-top: calc(2rem + 60px);
+    }
+
+    &__title{
+        text-transform: uppercase;
+        font-size: 40px;
+        border-bottom: 3px solid $color--light-grey-2;
+        padding-bottom: .5rem;
+        margin-bottom: 1rem;
+        font-weight: 700;
+        line-height: 1.66;
+
+        @include mq(medium){
+            font-size: 32px;
+        }
+
+        @include mq(small){
+            font-size: 28px;
+        }
+    }    
+}
+
+.site-page-np{
+    @include mq(small){
+        width: 90%;
+        margin-top: 2rem;
+    }
+}
+
+.disclaimer{
+    display: none;
+}
+  

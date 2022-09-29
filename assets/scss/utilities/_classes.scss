@@ -1,0 +1,19 @@
+/*** CLASSES ***/
+
+.main_btn{
+    display: block;
+    width: 100%;
+    text-align: center;
+    padding: 1rem 1.5rem;
+    background-color: $color--dark-grey-2;
+    color: $color--white-1;
+    text-transform: uppercase;
+    text-decoration: none;
+    transition: all .4s ease;
+    border: 1px solid $color--dark-grey-2;
+
+    &:hover{
+        color: $color--dark-grey-2;
+        background-color: transparent;
+    }
+}

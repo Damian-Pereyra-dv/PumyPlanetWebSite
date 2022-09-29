@@ -1,0 +1,5 @@
+Documento del SEO
+
+1) Se agregaron etiquetas meta en todos los archivos html.
+2) Se agregó además Open Graph.
+3) Se sustituyó gran parte del texto de relleno (lorem) por información real.
